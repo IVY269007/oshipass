@@ -1,0 +1,6 @@
+{
+  "name": "OshiPass — 推し活グッズ・チケット現地手渡し",
+  "description": "ライブ会場での現地手渡しに特化した、住所非開示・送料ゼロ・ワンタップ連絡の推し活グッズ＆チケット交換アプリ",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
