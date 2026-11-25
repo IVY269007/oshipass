@@ -1,5 +1,6 @@
-import { CheckCircle2, Lock, ShieldCheck, Star, Tag } from 'lucide-react';
+import { CheckCircle2, Lock, MonitorSmartphone, ShieldCheck, Star, Tag } from 'lucide-react';
 import type { UserProfile } from '../types';
+import { PWAInstallButton } from './PWAInstallButton';
 
 interface MyPageViewProps {
   profile: UserProfile;
@@ -135,6 +136,18 @@ export function MyPageView({
             <span>合流は22ゲート前や駅改札外など、明るく人通りの多い場所のみを指定できます。</span>
           </li>
         </ul>
+      </section>
+
+      {/* Desktop / Mobile PWA Installation */}
+      <section className="bg-white rounded-2xl border border-slate-200/90 p-5 space-y-3">
+        <div className="flex items-center gap-2">
+          <MonitorSmartphone className="w-4 h-4 text-violet-600" />
+          <h3 className="text-sm font-bold text-slate-900">デスクトップ・ホーム画面にインストール</h3>
+        </div>
+        <p className="text-xs text-slate-600 leading-relaxed">
+          PC（Chrome / Edge）やスマートフォンにアプリとして追加すると、ブラウザのタブに埋もれず専用ウィンドウで素早く起動できます。
+        </p>
+        <PWAInstallButton variant="card" />
       </section>
     </div>
   );

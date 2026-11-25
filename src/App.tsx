@@ -34,6 +34,8 @@ import { TradeModal } from './components/TradeModal';
 import { VenueMapView } from './components/VenueMapView';
 import { CreateListingModal } from './components/CreateListingModal';
 import { MyPageView } from './components/MyPageView';
+import { PWAInstallButton } from './components/PWAInstallButton';
+import { OfflineIndicator } from './components/OfflineIndicator';
 
 function getCurrentHHMM(): string {
   const now = new Date();
@@ -363,8 +365,9 @@ export default function App() {
             </button>
           </nav>
 
-          {/* Zone 3: 1 Primary CTA */}
+          {/* Zone 3: Primary CTA & PWA Install */}
           <div className="flex items-center gap-2 shrink-0">
+            <PWAInstallButton variant="header" />
             <button
               type="button"
               onClick={() => setActiveTab('map')}
@@ -776,6 +779,8 @@ export default function App() {
           onCreate={handleCreateListing}
         />
       )}
+
+      <OfflineIndicator />
     </div>
   );
 }
